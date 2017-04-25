@@ -39,7 +39,7 @@ do
       exit 0
     fi
 
-    file=$(echo "$files" | sed $(expr $i + $k)"q;d")
+    file=$(echo "$files" | sed $(expr $i + $k)"q;d")   # sed '52q;d' --> 印出
     echo "正在執行 $command $inputdir/$file"
     $command "$inputdir/$file"&
   done
